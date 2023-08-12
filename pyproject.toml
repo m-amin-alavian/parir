@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "parir"
+version = "0.1.0"
+description = ""
+authors = ["TerseTears <TerseTears@protonmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+hbsir = {git = "https://github.com/Iran-Open-Data/HBSIR"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
