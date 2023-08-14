@@ -1,0 +1,196 @@
+# Depreciation for various goods
+- Name: AC
+  Code:
+    - 53125
+  Lifetime: 24
+  Scrap_Value_Pct: 0.2
+  Depreciation: 3.3
+
+- Name: Bike
+  Code:
+    - 71311
+    - 71312
+    - 71313
+  Lifetime: 15
+  Scrap_Value_Pct: 0.5
+  Depreciation: 3.3
+
+- Name: Car
+  Code:
+    - 71111
+    - 71112
+    - 71113
+    - 71114
+    - 71115
+    - 71116
+    - 71117
+  Lifetime: 9
+  Scrap_Value_Pct: 0.74
+  Depreciation: 2.9
+
+- Name: Car_Motor
+  Code:
+   - 72118
+  Lifetime: 90
+  Scrap_Value_Pct: 0
+  Depreciation: 1.1
+
+- Name: Car_Tire
+  Code:
+    - 72111
+    - 72112
+  Lifetime: 2.7
+  Scrap_Value_Pct: 0.25
+  Depreciation: 30
+
+- Name: Cellphone
+  Code:
+   - 82113
+  Lifetime: 8
+  Scrap_Value_Pct: 0.5
+  Depreciation: 6.3
+
+- Name: Computer
+  Code:
+    - 91311
+  Lifetime: 16
+  Scrap_Value_Pct: 0.3
+  Depreciation: 4.4
+
+- Name: Fan
+  Code:
+    - 53128
+    - 53216
+  Lifetime: 30
+  Scrap_Value_Pct: 0.05
+  Depreciation: 3.2
+
+- Name: Freezer
+  Code:
+   - 53112
+  Lifetime: 30
+  Scrap_Value_Pct: 0.2
+  Depreciation: 2.7
+
+- Name: Motorcycle
+  Code:
+    - 71211
+    - 71212
+    - 71213
+  Lifetime: 10
+  Scrap_Value_Pct: 0.59
+  Depreciation: 4.1
+
+- Name: Oven
+  Code: 
+   - 53116
+  Lifetime: 30
+  Scrap_Value_Pct: 0.1
+  Depreciation: 3
+
+- Name: RadioCassette
+  Code:
+   - 91116
+   - 91122
+  Lifetime: 50
+  Scrap_Value_Pct: 0
+  Depreciation: 2
+
+- Name: Refrigrator
+  Code:
+    - 53111
+  Lifetime: 40
+  Scrap_Value_Pct: 0.14
+  Depreciation: 2.2
+
+- Name: SewingM
+  Code:
+    - 53132
+    - 53133
+    - 53134
+  Lifetime: 50
+  Scrap_Value_Pct: 0.3
+  Depreciation: 1.4
+
+- Name: Telephone
+  Code:
+   - 82111
+   - 82112
+  Lifetime: 50
+  Scrap_Value_Pct: 0
+  Depreciation: 2
+
+- Name: TV
+  Code:
+    - 91128
+    - 91129
+    - 91111
+    - 91112
+    - 91113
+    - 91114
+    - 91115
+  Lifetime: 30
+  Scrap_Value_Pct: 0.25
+  Depreciation: 2.5
+
+- Name: Vacuum
+  Code:
+    - 53129
+  Lifetime: 30
+  Scrap_Value_Pct: 0.22
+  Depreciation: 3.2
+
+- Name: VCR_DVD
+  Code:
+    - 91117
+    - 91118
+  Lifetime: 30
+  Scrap_Value_Pct: 0.1
+  Depreciation: 3
+
+- Name: Washer
+  Code:
+   - 53113
+   - 53114
+  Lifetime: 24
+  Scrap_Value_Pct: 0.24
+  Depreciation: 3.2
+
+- Name: Other
+  Code: 
+    - 53122
+    - 53123
+    - 53124
+    - 53126
+    - 53127
+    - 53131
+    - 53136
+    - 53137
+    - 53215
+    - 53217
+    - 53218
+    - 53219
+    - 71214
+    - 71411
+    - 71412
+    - 72113
+    - 72114
+    - 72115
+    - 72116
+    - 72117
+    - 82114
+    - 82115
+    - 91123
+    - 91124
+    - 91213
+    - 91214
+    - 91215
+    - 91219
+    - 91221
+    - 91222
+    - 91223
+    - 91314
+    - 91318
+  Lifetime: 
+  Scrap_Value_Pct: 
+  Depreciation: 3.1
