@@ -121,9 +121,9 @@ members_properties:
     1363: "P1"
 
   items:
-    member_number: &members_address
-      new_name: "ID_Inner"
-      type: "unsigned"     
+    members_address: &members_address
+      new_name: "ID"
+      type: "unsigned"
 
     members_member_number: &members_member_number
       new_name: "Member_Number"
@@ -310,13 +310,14 @@ members_properties:
 
 
 house_specifications:
-  settings:
-    missings: drop
 
   file_code:
     1363: "P2"
 
   items:
+    other_tenure: &other_tenure
+        new_name: "Other_tenure"
+        type: "string"
     rooms: &rooms
         new_name: "Number_of_Rooms"
         type: "unsigned"
@@ -348,7 +349,7 @@ house_specifications:
     cookfuel: &cookfuel
       new_name: "Cooking_Fuel"
       type: "category"
-      categories: &fuel_categories
+      categories:
         1: "Karosine"
         2: "Gasoline"
         3: "Gas"
@@ -363,12 +364,32 @@ house_specifications:
     heatfuel: &heatfuel
       new_name: "Heating_Fuel"
       type: "category"
-      categories: *fuel_categories
+      categories:
+        11: "Karosine"
+        12: "Gasoline"
+        13: "Gas"
+        14: "Piped_Gas"
+        15: "Electricity"
+        16: "Wood_and_Charcoal"
+        17: "Animal_Fuel"
+        18: "Charcoal"
+        19: "Other_Fuel"
+        20: "None"
 
     hotwaterfuel: &hotwaterfuel
       new_name: "Hotwater_Fuel"
       type: "category"
-      categories: *fuel_categories
+      categories:
+        21: "Karosine"
+        22: "Gasoline"
+        23: "Gas"
+        24: "Piped_Gas"
+        25: "Electricity"
+        26: "Wood_and_Charcoal"
+        27: "Animal_Fuel"
+        28: "Charcoal"
+        29: "Other_Fuel"
+        30: "None"
 
     car: &car
         new_name: "Car"
@@ -499,12 +520,12 @@ house_specifications:
       new_name: "Centralcooler"
       type: "boolean"
       true_condition: 1
-    centralheat: &centralheat
+    centralheater: &centralheater
       new_name: "Centralheat"
       type: "boolean"
       true_condition: 1
-    pakage: &pakage
-      new_name: "Pakage"
+    package: &package
+      new_name: "Package"
       type: "boolean"
       true_condition: 1
     cooler_gas: &cooler_gas
@@ -539,56 +560,43 @@ house_specifications:
       new_name: "Homerepair_year"
       type: "boolean"
       true_condition: 1
-    prtrip_month: &prtrip_month
-      new_name: "Prtrip_month"
+    ziarati_trip_month: &ziarati_trip_month
+      new_name: "Ziarati_trip_month"
       type: "boolean"
       true_condition: 1
-    prtrip_year: &prtrip_year
-      new_name: "Prtrip_year"
+    ziarati_trip_year: &ziarati_trip_year
+      new_name: "Ziarati_trip_year"
       type: "boolean"
       true_condition: 1
-    frtrip_month: &frtrip_month
-      new_name: "Frtrip_month"
+    foreign_trip_month: &foreign_trip_month
+      new_name: "Foreign_trip_month"
       type: "boolean"
       true_condition: 1
-    frtrip_year: &frtrip_year
-      new_name: "Frtrip_year"
+    foreign_trip_year: &foreign_trip_year
+      new_name: "Foreign_trip_year"
       type: "boolean"
       true_condition: 1
-    bastari_month: &bastari_month
-      new_name: "Bastari_month"
+    surgery_month: &surgery_month
+      new_name: "Surgery_month"
       type: "boolean"
       true_condition: 1
-    bastari_year: &bastari_year
-      new_name: "Bastari_year"
+    surgery_year: &surgery_year
+      new_name: "Surgery_year"
       type: "boolean"
       true_condition: 1
-    operation_month: &operation_month
-      new_name: "Operation_month"
+    other_event_month: &other_event_month
+      new_name: "Other_event_month"
       type: "boolean"
       true_condition: 1
-    operation_year: &operation_year
-      new_name: "Operation_year"
+    other_event_year: &other_event_year
+      new_name: "Other_event_year"
       type: "boolean"
       true_condition: 1
-    other_month: &other_month
-      new_name: "Other_month"
-      type: "boolean"
-      true_condition: 1
-    other_year: &other_year
-      new_name: "Other_year"
-      type: "boolean"
-      true_condition: 1
-    other_name: &other_name
-      new_name: "Other_name"
-      type: "boolean"
-      true_condition: 1
-    noceremony: &noceremony
-      new_name: "Noceremony"
-      type: "boolean"
-      true_condition: 1
-    noceremony_year: &noceremony_year
-      new_name: "Noceremony_year"
+    other_event_name: &other_event_name
+      new_name: "Other_event_name"
+      type: "string"
+    no_event: &no_event
+      new_name: "No_event"
       type: "boolean"
       true_condition: 1
 
@@ -612,7 +620,7 @@ house_specifications:
           7: "Other"
       DYCOL02: 
         1383: *rooms
-        1387: null
+        1387: *other_tenure
       DYCOL03: 
         1383: *space
         1387: *rooms
@@ -730,7 +738,7 @@ house_specifications:
         1384: *kitchen
         1385: *internet
         1387: *phone
-        1391: *pipgas
+        1391: *pipegas
       DYCOL33:
         1383: *centralcooler
         1384: *cooler
@@ -788,6 +796,100 @@ house_specifications:
         1386: *heatfuel
         1387: *cookfuel
         1391: *seweragenetwork
+      DYCOL43:
+        1384: *homerepair_year
+        1385: *party_year
+        1386: *hotwaterfuel
+        1387: *heatfuel
+        1391: *cookfuel
+      DYCOL44:
+        1384: *ziarati_trip_month
+        1385: *ceremony_month
+        1386: *party_month
+        1387: *hotwaterfuel
+        1391: *heatfuel
+      DYCOL45:
+        1384: *ziarati_trip_year
+        1385: *ceremony_year
+        1386: *party_year
+        1387: *party_month
+        1391: *hotwaterfuel
+      DYCOL46:
+        1384: *foreign_trip_month
+        1385: *homerepair_month
+        1386: *ceremony_month
+        1387: *party_year
+        1391: *party_month
+      DYCOL47:
+        1384: *foreign_trip_year
+        1385: *homerepair_year
+        1386: *ceremony_year
+        1387: *ceremony_month
+        1391: *party_year
+      DYCOL48:
+        1384: *surgery_month
+        1385: *ziarati_trip_month
+        1386: *homerepair_month
+        1387: *ceremony_year
+        1391: *ceremony_month
+      DYCOL49:
+        1384: *other_event_month
+        1385: *ziarati_trip_month
+        1386: *homerepair_year
+        1387: *homerepair_month
+        1391: *ceremony_year
+      DYCOL50:
+        1384: *other_event_year
+        1385: *foreign_trip_month
+        1386: *ziarati_trip_month
+        1387: *homerepair_year
+        1391: *homerepair_month
+      DYCOL51:
+        1384: *no_event
+        1385: *foreign_trip_year
+        1386: *ziarati_trip_year
+        1387: *ziarati_trip_month
+        1391: *homerepair_year
+      DYCOL52:
+        1385: *surgery_month
+        1386: *foreign_trip_month
+        1387: *ziarati_trip_year
+        1391: *ziarati_trip_month
+      DYCOL53:
+        1385: *other_event_month
+        1386: *foreign_trip_year
+        1387: *foreign_trip_month
+        1391: *ziarati_trip_year
+      DYCOL54:
+        1385: *other_event_year
+        1386: *surgery_month
+        1387: *foreign_trip_year
+        1391: *foreign_trip_month
+      DYCOL55:
+        1385: *no_event
+        1386: *other_event_month
+        1387: *surgery_month
+        1391: *foreign_trip_year
+      DYCOL56:
+        1386: *other_event_year
+        1387: *other_event_month
+        1391: *surgery_month
+      DYCOL57:
+        1386: *no_event
+        1387: *other_event_year
+        1391: *surgery_year
+      DYCOL58:
+        1387: *no_event
+        1391: *other_event_month
+      DYCOL59:
+        1389: *other_event_name
+        1391: *other_event_year
+      DYCOL60: 
+        1391: *other_event_name
+      DYCOL61:
+        1391: *no_event
+
+
 
 ######################################################################
 ##                - - -    Expenditure Tables   - - -               ##
